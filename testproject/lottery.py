@@ -19,13 +19,12 @@ def ts():
     time.sleep(2)
 
 
-# def test_element_does_not_exist():
-#     with self.assertRaises(NoSuchElementException):
-#         driver.find_element_by_class_name('balls')
-
-
 # TC01: lotto huzas elott nem ismertek a szamok
-# assert test_element_does_not_exist()
+try:
+    assert driver.find_element_by_class_name('balls')
+except:
+    print('Nincs kihúzott szám.')
+ts()
 
 # TC02: lottohuzás működik
 generate_button = driver.find_element_by_id('draw-number')
@@ -43,5 +42,6 @@ ts()
 balls = driver.find_elements_by_class_name('balls')
 assert len(balls) == 6
 
+# ablak lezárása, memória felszabadítása
 driver.close()
 driver.quit()

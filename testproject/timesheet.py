@@ -52,3 +52,7 @@ ts()
 # eredmény vizsgálata
 assert driver.find_element_by_xpath('//*[@id="section-thankyou"]/div/p[2]/span[1]').text == '2'
 assert driver.find_element_by_xpath('//*[@id="section-thankyou"]/div/p[2]/span[2]').text == '0'
+
+driver.close()
+driver.quit()
+

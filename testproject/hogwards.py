@@ -49,3 +49,6 @@ assert driver.find_element_by_id('departure-date-text').text == testdata_datetim
 assert driver.find_element_by_id('side-detparture-date').text == testdata_datetime.strftime('%Y-%m-%d')
 assert driver.find_element_by_id('departure-time-text').text == testdata_datetime.strftime('%H:%M%p')
 assert driver.find_element_by_id('side-departure-time').text == testdata_datetime.strftime('%H:%M%p')
+
+driver.close()
+driver.quit()

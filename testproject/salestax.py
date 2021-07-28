@@ -52,3 +52,6 @@ try:
 except:
     print('Nem jelenik meg a 4.95 érték a salestax mezőben!')
 assert driver.find_element_by_id('gtotal').get_attribute('value') == '9.90'
+
+driver.close()
+driver.quit()

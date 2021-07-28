@@ -42,3 +42,6 @@ generate_button.click()
 ts()
 balls = driver.find_elements_by_class_name('balls')
 assert len(balls) == 6
+
+driver.close()
+driver.quit()
